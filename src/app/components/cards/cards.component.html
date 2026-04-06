@@ -1,0 +1,18 @@
+
+<button class="custom-button">
+  <img
+   [src]="productsCard.image"
+    alt="imagen producto"
+    class="image"
+  />
+  <div class="custom-body">
+    <h3 class="title">{{productsCard.title.length>40?
+    (productsCard.title | slice:0:40) + "..." : productsCard.title}}</h3>
+
+    <p class="price">precio : {{productsCard.price}}$</p>
+
+    <p class="description">{{productsCard.description.length>150?
+    (productsCard.description | slice:0:150) + "..." : productsCard.description}}</p>
+  </div>
+</button>
+

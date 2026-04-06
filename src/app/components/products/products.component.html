@@ -1,0 +1,10 @@
+<div class="custom-catalog-personaliced">
+  <div class="custom-card" *ngFor="let p of products; let i = index">
+    <app-cards [productsCard]="p" (click)="openModal(p.id)"></app-cards>
+  </div>
+</div>
+<app-cards-details 
+  *ngIf="showModal && selectedId > 0"
+  (mostrarModal)="closeModal($event)"
+  [seleccionaId]="selectedId"
+></app-cards-details>

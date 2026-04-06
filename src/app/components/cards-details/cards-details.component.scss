@@ -1,0 +1,35 @@
+.overlay-container {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: 9998;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-modal {
+  height: 70%;
+  width: 50%;
+  background-color: white;
+  z-index: 9999;
+}
+.custom-svg {
+  color:  rgba(87, 107, 193, 1);
+  height: 30px;
+  width: 30px;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+}
+.custom-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
