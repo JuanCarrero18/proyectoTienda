@@ -1,0 +1,47 @@
+.image{
+    max-height: 4rem;
+    max-width: 4rem;
+    margin: 20px;
+}
+.title{
+width: 90%;
+font-size: 20px; 
+color: rgb(88, 61, 61);   
+}
+.custom-button{
+    max-width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    overflow: hidden;
+     background: linear-gradient(
+    180deg,
+    rgba(182, 185, 254, 1) 0%,
+    rgba(197, 173, 251, 1) 100%
+  );
+    padding: 10px;
+    text-align: center; 
+    cursor: pointer;   
+     transition: transform 0.3s ease;  
+    
+}
+.custom-button:hover{
+     transform: scale(1.2);
+}
+
+.description{
+    font-size: 10px;
+    color: purple;
+    margin: 0%;
+}
+.price{
+  display: inline-block;
+  background-color: #f56571;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin: 10px 0;
+}

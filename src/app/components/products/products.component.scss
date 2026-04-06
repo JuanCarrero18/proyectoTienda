@@ -1,0 +1,10 @@
+.custom-catalog-personaliced{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1rem;
+    
+}

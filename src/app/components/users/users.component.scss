@@ -1,0 +1,133 @@
+.input-group {
+  flex-direction: column;
+  padding-bottom: 5%;
+  display: flex;
+  gap: 12px;
+}
+.input-group ::placeholder {
+  color: rgba(245, 241, 241, 0.8);
+  text-align: center;
+  letter-spacing: 1px;
+}
+.options {
+  color: white;
+  display: flex;
+  font-size: 10px;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid white;
+  background: transparent; // 👈 transparente
+  cursor: pointer;
+  position: relative;
+}
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+.forgotcolor {
+  color: white;
+  font-size: 10px;
+}
+.singin {
+  background: linear-gradient(
+    180deg,
+    rgba(182, 185, 254, 1) 0%,
+    rgba(197, 173, 251, 1) 100%
+  );
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  color: white;
+  margin-bottom: 10px;
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  margin-top: 10px;
+}
+.register p {
+  margin: 0%;
+}
+
+.circle-btn {
+  display: flex;
+  border: 1px solid white;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 20px;
+  background: transparent;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold; /*para que se muestre en negrita*/
+  border-radius: 15px; /*redondear corners*/
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /*separacion de elementos*/
+}
+
+.input-group input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 10px 35px 10px 10px; /* espacio derecha para icono */
+  color: white;
+  font-size: 16px;
+  text-align: center; /* texto centrado */
+  background-repeat: no-repeat; /*no repite el icono*/
+  background-position: right 10px center; /* icono dentro */
+  background-size: 18px;
+}
+/*ICONO EMAIL*/
+.input-group input[type="email"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M2 4h20v16H2V4zm10 7L2 6v2l10 5 10-5V6l-10 5z'/%3E%3C/svg%3E");
+}
+
+/* ICONO USER */
+.input-group input[type="text"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z'/%3E%3C/svg%3E");
+}
+
+/* ICONO PASSWORD */
+.input-group input[type="password"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M12 17a2 2 0 002-2 2 2 0 10-4 0 2 2 0 002 2zm6-6h-1V9a5 5 0 00-10 0v2H6a2 2 0 00-2 2v7h16v-7a2 2 0 00-2-2zm-3 0H9V9a3 3 0 016 0v2z'/%3E%3C/svg%3E");
+}
+.imageLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.input-group input:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+.error {
+  color: red;
+}
