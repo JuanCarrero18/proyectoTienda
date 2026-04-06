@@ -8,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent {
   title = 'tienda';
 
-  constructor() {}
+  constructor() {
+    console.log("hola github");
+    
+  }
 
   ngOnInit(): void {
 
