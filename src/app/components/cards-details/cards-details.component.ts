@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ProductsService } from 'src/app/products.service';
+import { ProductsService } from 'src/app/components/products/products.service';
 import { Products } from '../products/products.interface';
 
 @Component({
@@ -23,7 +23,6 @@ export class CardsDetailsComponent implements OnInit {
    if (this.seleccionaId) {
       this.productsService.getProduct(this.seleccionaId).subscribe({
         next: (data: Products) => {
-         console.log(data);
          this.detalleProducto = data;
          
         }

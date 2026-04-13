@@ -1,5 +1,12 @@
+<div class="container-selected">
+  <select [(ngModel)]="categorySelected" (ngModelChange)="filterByCategory()">
+    <option value="todas">Todas las categorias</option>
+    <option *ngFor="let c of categories" [value]="c">{{c}}</option>
+  </select>
+</div>
+
 <div class="custom-catalog-personaliced">
-  <div class="custom-card" *ngFor="let p of products; let i = index">
+  <div class="custom-card" *ngFor="let p of productFiltered; let i = index">
     <app-cards [productsCard]="p" (click)="openModal(p.id)"></app-cards>
   </div>
 </div>

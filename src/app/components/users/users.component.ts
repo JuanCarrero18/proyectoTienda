@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ServicesService } from 'src/app/services.service';
+import { ServicesService } from 'src/app/components/users/services.service';
 import { Users } from './users.interface';
 import { Router } from '@angular/router';
 
@@ -34,8 +34,6 @@ export class UsersComponent implements OnInit {
     const email: string | undefined = this.loginForm.get('email')?.value;
     const password: string | undefined = this.loginForm.get('password')?.value;
     const username: string | undefined = this.loginForm.get('username')?.value;
-    console.log(event);
-    console.log(password, username);
 
     if (event.submitter.value === 'register' && this.userAlreadyExist(email)) {
     this.emailTrue()
@@ -57,15 +55,13 @@ export class UsersComponent implements OnInit {
 
       this.loginFalse()
     }
-    console.log(this.userCorrect(password, username));
   }
   addUser(): void {
     const newUsers: Users = this.loginForm.value;
-    console.log(newUsers);
+  
 
     this.service.addUser(newUsers).subscribe((newUsers: Users) => {
       if (newUsers) {
-        console.log(newUsers);
         this.getUsers()
       }
     });
@@ -73,10 +69,7 @@ export class UsersComponent implements OnInit {
   private getUsers(): void {
     this.service.getUsers().subscribe((users: Users[]) => {
       if (users) {
-        console.log(users);
-
         this.users = users;
-        
       }
     });
   }

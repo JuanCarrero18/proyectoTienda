@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { Products } from 'src/app/components/products/products.interface';
-import { ProductsService } from 'src/app/products.service';
+import { ProductsService } from 'src/app/components/products/products.service';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
     private getProducts(): void{
     this.productService.getProducts().subscribe(( product: Products[])=>{
       if(product){
-        console.log(product);
         this.products = product;
       }
     })
