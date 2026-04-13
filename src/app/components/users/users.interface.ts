@@ -24,3 +24,16 @@ export interface Name {
   firstName: string;
   secondName: string;
 }
+
+
+// export interface Users {
+//   id?: number;
+//   email: string;
+//   password: string;
+//   name: string;
+//   role: string;
+//   avatar: string;
+//   creationAt: string;
+//   updatedAt: string;
+// }
+

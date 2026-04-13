@@ -3,8 +3,31 @@
     <app-cards [productsCard]="p" (click)="openModal(p.id)"></app-cards>
   </div>
 </div>
-<app-cards-details 
+<app-cards-details
   *ngIf="showModal && selectedId > 0"
   (mostrarModal)="closeModal($event)"
   [seleccionaId]="selectedId"
 ></app-cards-details>
+
+<!-- <div class="container-selected">
+  
+  <select [(ngModel)]="categorySelected" (ngModelChange)="filterByCategory()">
+    <option value="todas">Todas las categorías</option>
+    <option *ngFor="let c of selectedCategory" [value]="c.id">
+      {{ c.id }}
+      
+    </option>
+  </select>
+</div>
+
+<div class="custom-catalog-personaliced">
+  <div class="custom-card" *ngFor="let p of productFiltered; let i = index">
+    <app-cards [productsCard]="p" (click)="openModal(p.id)"></app-cards>
+  </div>
+</div>
+
+<app-cards-details 
+  *ngIf="showModal && selectedId > 0"
+  (mostrarModal)="closeModal($event)"
+  [seleccionaId]="selectedId"
+></app-cards-details> -->
